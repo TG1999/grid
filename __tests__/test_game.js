@@ -36,15 +36,19 @@ describe('Game', () => {
     expect(game.players).not.toContain(player2);
   });
 
-  test('should detect a collision correctly', () => {
+  test('should detect a collision correctly & game should continue', () => {
     const game = Game.create(5, 5);
     const player1 = Player.create();
     const player2 = Player.create();
+    const player3 = Player.create();
     game.addPlayer(player1);
     game.addPlayer(player2);
+    game.addPlayer(player3);
     player1.setPosition(2, 2);
     player2.setPosition(2, 2);
+    player3.setPosition(1,2)
     expect(game.checkforCollision()).toBe(true);
+    expect(game.players).toContain(player3);
   });
 
   test('should detect a win correctly', () => {
