@@ -4,7 +4,7 @@
   "description": "",
   "main": "grid.js",
   "scripts": {
-    "test": "babel-node node_modules/.bin/jest"
+    "test": "babel-node ./node_modules/jest/bin/jest.js"
   },
   "author": "",
   "license": "ISC",
