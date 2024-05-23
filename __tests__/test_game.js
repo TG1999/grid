@@ -1,6 +1,15 @@
 import Game from '../game.js';
 import Player from '../player.js';
 
+// ----------------- Game should have these class nomenclature -----------------
+// gameId: To track different game "id", it increases by +1 after a game is created
+// id: Game id of an object
+// create: Create a new Game object
+// addPlayer(player): Add the "player" in the game
+// players: List of players inside that game
+// checkforCollision(): Check for collision
+// checkforWin(): Check for a win
+
 describe('Game', () => {
   beforeEach(() => {
     Game.gameId = 1;
