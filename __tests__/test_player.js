@@ -24,7 +24,7 @@ describe('Player', () => {
     expect(Player.nextPlayerName).toBe('B');
   });
 
-  test('should reset the next player name after Z', () => {
+  test('should update the next player name correctly after Z', () => {
     Player.nextPlayerName = 'Z';
     Player.create();
     expect(Player.nextPlayerName).toBe('AA');
